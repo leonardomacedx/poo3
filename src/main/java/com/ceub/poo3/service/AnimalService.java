@@ -4,6 +4,7 @@ import com.ceub.poo3.dto.AnimalAtualizacaoDTO;
 import com.ceub.poo3.dto.AnimalCadastroDTO;
 import com.ceub.poo3.enums.StatusEnum;
 import com.ceub.poo3.exception.AtualizacaoAnimalException;
+import com.ceub.poo3.exception.CadastroAnimalException;
 import com.ceub.poo3.exception.ExclusaoAnimalException;
 import com.ceub.poo3.exception.ListarAnimalException;
 import com.ceub.poo3.model.Animal;
@@ -31,7 +32,7 @@ public class AnimalService {
             BeanUtils.copyProperties(animalRequestDTO, animal);
             animal.setStatus(StatusEnum.DISPONIVEL);
         } catch (Exception e) {
-            throw new AtualizacaoAnimalException("Erro ao cadastrar animal", e);
+            throw new CadastroAnimalException("Erro ao cadastrar animal", e);
         } finally {
             animalRepository.save(animal);
         }
