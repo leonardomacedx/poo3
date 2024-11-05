@@ -15,7 +15,7 @@ Este projeto é uma aplicação Spring Boot para gerenciamento de adoção de an
 ### Pré-requisitos
 - Java 21 ou superior
 - Maven
-- 
+  
 ### Instalação
 1. Clone o repositório:
     ```sh
